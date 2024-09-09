@@ -1,6 +1,8 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Authorization
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+– Auth with secure cookie tokens
+– Proxy & Sniff API
+– API's Repository Pattern
 
 ## Setup
 

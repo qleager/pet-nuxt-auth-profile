@@ -13,4 +13,8 @@ const onButtonClick = () => {
 </template>
 
 <style>
+.index {
+  display: flex;
+  justify-content: center;
+}
 </style>

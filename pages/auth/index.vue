@@ -1,8 +1,20 @@
 <script lang="ts" setup>
+const { $api } = useNuxtApp()
+
 const auth = ref({
-  username: '',
-  password: '',
+  username: 'emilys',
+  password: 'emilyspass',
 })
+
+const onSubmit = async () => {
+  try {
+    await $api.auth.login(auth.value)
+    navigateTo('/profile')
+  }
+  catch (error) {
+    console.error('Error login fetching:', error.response?.data || error.message)
+  }
+}
 </script>
 
 <template>
@@ -16,16 +28,18 @@ const auth = ref({
           <InputText
             id="username"
             v-model="auth.username"
-            type="email"
-            placeholder="Email"
+            placeholder="username"
           />
           <InputText
             id="password"
-            v-model="auth.username"
+            v-model="auth.password"
             type="password"
             placeholder="Password"
           />
-          <Button label="Login" />
+          <Button
+            label="Login"
+            @click="onSubmit"
+          />
         </div>
       </template>
     </Card>
