@@ -1,7 +1,9 @@
 # Nuxt 3 Authorization
 
 – Auth with secure cookie tokens
+
 – Proxy & Sniff API
+
 – API's Repository Pattern
 
 ## Setup
